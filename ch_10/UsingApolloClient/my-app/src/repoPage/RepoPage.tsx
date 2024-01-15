@@ -1,14 +1,14 @@
 import { useState } from 'react';
-import { RepoData, SearchCriteria } from '../api/types';
+import { SearchCriteria } from '../api/types';
 import { SearchRepoForm } from './SearchRepoForm';
 import { FoundRepo } from './FoundRepo';
 import { StarRepoButton } from './StartRepoButton';
 import { GET_REPO } from '../api/getRepo';
-import { useApolloClient, useLazyQuery, useMutation, useQuery } from '@apollo/client';
+import { useApolloClient, useLazyQuery, useMutation } from '@apollo/client';
 import { STAR_REPO } from '../api/starRepo';
 
 export function RepoPage() {
-  const [seachCriteria, setSearchCriteria] = useState<SearchCriteria | undefined>();
+  const [, setSearchCriteria] = useState<SearchCriteria | undefined>();
 
   const [getRepo, { data }] = useLazyQuery(GET_REPO);
 
