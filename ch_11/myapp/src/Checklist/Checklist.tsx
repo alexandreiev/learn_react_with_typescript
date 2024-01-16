@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, ReactNode, useState } from 'react';
+import { ComponentPropsWithoutRef, ReactNode } from 'react';
 import { IdValue } from './types';
 import { useChecked } from './useChecked';
 
